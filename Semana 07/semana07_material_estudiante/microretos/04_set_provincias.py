@@ -12,6 +12,7 @@ print("¿Está San Jose?:", "San Jose" in provincias)
 print("Después de repetir San Jose:", len(provincias))
 
 # TODO: agregue "Heredia" mediante add().
+provincias.add("Heredia")
 print("Después de agregar Heredia:", len(provincias))
 print("¿Está Heredia?:", "Heredia" in provincias)
 
