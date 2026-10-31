@@ -6,6 +6,8 @@ print("Ventas de la primera sede: ", sedes[0]["ventas"])
 
 print("*\nANALISIS SEMANAL DE EMPRENDIMIENTO")
 
+provincias = set()
+
 for sede in sedes: 
     #print("Emprendimiento: ", sede["nombre"])
     total = sum(sede["ventas"])
@@ -25,4 +27,6 @@ for sede in sedes:
         f"{sede["nombre"]} | Total: {total:,.2f} | "
         f"Cumplimiento: {porcentaje:.2f}% | {estado}"
     )
-        
+    
+    provincias.add(sede["provincia"])
+print("Set de provincias:", provincias)
