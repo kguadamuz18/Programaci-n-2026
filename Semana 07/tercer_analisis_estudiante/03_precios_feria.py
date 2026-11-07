@@ -30,6 +30,11 @@ elif rango >= 150:
 else: 
     variacion = "Variacion baja"
     
+# TODO: Muestre producto y todos los resultados.
+# Con los datos base: promedio ₡980, mínimo ₡850, máximo ₡1200,
+# rango ₡350, 2 precios sobre el promedio, variación alta.
+# Prueba de código: use temporalmente cinco precios iguales y compruebe que
+# el rango sea cero y ninguno supere el promedio. Restaure la lista.
 print("\n", "-" * 60)
 print("\t\tCOMPARACION DE PRECIOS")
 print("-" * 60, "\n")
@@ -41,13 +46,4 @@ print(f"Precio minimo: ₡{minimo}")
 print(f"Precio maximo: ₡{maximo}")
 print(f"Rango de precios: ₡{rango}")
 print(f"Precios superiores al promedio: {precios_superiores}")
-print(f"Clasificacion: {variacion}")
-
-
-
-# TODO: Muestre producto y todos los resultados.
-# Con los datos base: promedio ₡980, mínimo ₡850, máximo ₡1200,
-# rango ₡350, 2 precios sobre el promedio, variación alta.
-# Prueba de código: use temporalmente cinco precios iguales y compruebe que
-# el rango sea cero y ninguno supere el promedio. Restaure la lista.
-print 
+print(f"Clasificacion: {variacion}\n")

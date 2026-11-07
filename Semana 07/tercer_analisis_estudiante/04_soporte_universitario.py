@@ -65,7 +65,7 @@ print("\n", "-" * 60)
 print("\t\tANALISIS DE SOPORTE UNIVERSITARIO")
 print("-" * 60, "\n")
 
-print("\n\t\tResultados generales: \n")
+print("\t\tResultados generales: \n")
 
 print(f"Total de casos: {len(incidencias)}")
 print(f"Total de minutos de atencion: {total_minutos}")
@@ -75,7 +75,7 @@ print("\n\t\tCasos por categoria:\n")
 
 print(f"Acceso: {conteo_categorias['Acceso']}")
 print(f"Equipo: {conteo_categorias['Equipo']}")
-print(f"Equipo: {conteo_categorias['Red']}")
+print(f"Red: {conteo_categorias['Red']}")
 
 print("\n\t\tCasos pendientes:\n")
 
