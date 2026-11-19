@@ -82,15 +82,37 @@ conteo_hospital = {}
 total_paciente = 0 
 
 for registro in registros:
-    for hospitales in registro['hospital']:
-        total_paciente += 1
-        
-        if hospitales in conteo_hospital: 
-            conteo_hospital[hospitales] += 1
-        else: 
-            conteo_hospital[hospitales] = 1
-for hospitales, cantidad in conteo_hospital.items(): 
+    hospital = registro["hospital"]
+    total_paciente += 1
     
-    print(f"- {hospitales}: {cantidad}")
-# FASE 4: CONTAR ATENCIONES POR ENFERMEDAD DIAGNOSTICADA
+    if hospital in conteo_hospital:
+        conteo_hospital[hospital]+= 1
+    
+    else: 
+        conteo_hospital[hospital] = 1
+    
+print("\nTotal de atenciones: ", total_paciente)    
 
+for hospital, cantidad in conteo_hospital.items():
+    print(f"- {hospital}: {cantidad}")
+    
+# FASE 4: CONTAR ATENCIONES POR ENFERMEDAD DIAGNOSTICADA
+print("\n ANALISIS FASE #4 ATENCIONES POR ENFERMEDAD")
+
+conteo_enfermedades = {}
+total_diagnosticos = 0 
+
+for registro in registros: 
+    enfermedad = registro["diagnostico"]
+    total_diagnosticos += 1
+    
+    if enfermedad in conteo_enfermedades:
+        conteo_enfermedades[enfermedad] +=1
+        
+    else: 
+        conteo_enfermedades[enfermedad]= 1
+        
+print("\nTotal de diagnosticos: ", total_diagnosticos)
+
+for enfermedad, cantidad in conteo_enfermedades.items():
+    print(f"- {enfermedad}: {cantidad}")
